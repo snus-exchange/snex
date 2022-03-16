@@ -53,6 +53,13 @@
   
   
   </style>
+    <script>
+       var pmLink = document.getElementById("pm_link");
+        pmLink.href     = "https://" + CH_chatango.username + "." + CH_chatango.base_domain;
+        pmLink.innerHTML = copy.pm;
+    </script>
+    
+    
   
   </head>
     <body>
@@ -75,10 +82,10 @@
   
    </div>
   
-      <div class="button" >
+      <div class="button" id="pmLink" onclick="location.href='https://snexchange.chatango.com'">
   
    <p> 
-  Kommer snart
+ PM
   </p>
   
    </div>
