@@ -1,3 +1,4 @@
+!<!DOCTYPE html>
 
 <html lang="no" dir="ltr">
   <head>
@@ -12,105 +13,162 @@
   <link rel="apple-touch-icon" href="se.jpg">
 
   <style>
-   
+
       html div{
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none;
-        overflow: hidden;
+
+
 }
-    
-    
+
+
   body{
   background-color: black;
   }
-  
+  #imenu{
+    display: none;
+height: 100%;
+overflow:scroll;
+  }
+
+  #imenu iframe{
+    display:block;
+height: 80%;
+width: 100%;
+  border: none;
+  }
+
+  .back{
+    display: block;
+    position: absolute;
+
+
+    margin-left: 70%;
+  }
+
+
+
+  #home{
+display:block;
+overflow: hidden;
+  }
+
   .header{
   color: white;
   margin-top: 50%;
   }
-  
+
    .version{
   color: white;
-  
+
   }
-  
+
      .button{
   border: solid white 1px;
   width: 150px;
   height: 50px;
    color: white;
+   display:block;
      margin-bottom: 30px;
   }
-  
+
      #button1:active{
-     
+
   border: solid white 1.5px;
   }
-  
-  
-  
+
+
+
   </style>
-    <script>
-       var pmLink = document.getElementById("pm_link");
-        pmLink.href     = "https://" + CH_chatango.username + "." + CH_chatango.base_domain;
-        pmLink.innerHTML = copy.pm;
-    </script>
-    
-    
-  
+  <script type="text/javascript">
+    function switchVisible() {
+                if (document.getElementById('home')) {
+
+                    if (document.getElementById('home').style.display == 'none') {
+                        document.getElementById('home').style.display = 'block';
+                        document.getElementById('imenu').style.display = 'none';
+                    }
+                    else {
+                        document.getElementById('home').style.display = 'none';
+                        document.getElementById('imenu').style.display = 'block';
+                    }
+                }
+    }
+  </script>
+
+
+
   </head>
     <body>
+      <div id="home">
+
+
     <center>
 
-  
+
   <div class="header">
-  
+
   <h1>
   Snus Exchange
   </h1>
-  
+
   </div>
-  
-    <div class="button" id="button1" onclick="location.href='https://snexchange.chatango.com'">
-  
-   <p> 
+
+    <div class="button" onclick="switchVisible()">
+
+   <p>
   Chat
   </p>
-  
+
    </div>
-  
-      <div class="button" id="pmLink" onclick="location.href='https://snexchange.chatango.com'">
-  
-   <p> 
- PM
+
+      <div class="button">
+
+   <p>
+ kommer snart
   </p>
-  
+
    </div>
       <div class="button">
-  
-   <p> 
+
+   <p>
   Kommer snart
   </p>
-  
+
    </div>
-  
-  
+
+
     <div class="version">
-  
-  <p> 
+
+  <p>
   beta 0.0.1
   </p>
-  
+
     </div>
-  
-  
-  
-    
-    
-    
-    </center>
+
+
+
+
+
+  </center>
+
+          </div>
+
+<div id="imenu">
+
+<div class="back" onclick="switchVisible()">
+<p> < back</p>
+</div>
+  <iframe src="https://snexchange.chatango.com" title="chat" >
+  </iframe>
+
+
+</div>
+
+
+
         </body>
       </html>
