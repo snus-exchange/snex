@@ -1,0 +1,66 @@
+html div{
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none;
+}
+
+
+body{
+background-color: black;
+}
+#imenu{
+display: none;
+height: 845px;
+overflow: hidden;
+}
+
+#imenu iframe{
+display:block;
+margin-top: 40px;
+height: 90%;
+width: 100%;
+border: none;
+
+}
+
+.back{
+display: block;
+position: absolute;
+
+text-decoration: underline;
+float: left;
+color: white;
+}
+
+
+
+#home{
+display:block;
+overflow: hidden;
+}
+
+.header{
+color: white;
+margin-top: 50%;
+}
+
+.version{
+color: white;
+
+}
+
+.button{
+border: solid white 1px;
+width: 150px;
+height: 50px;
+color: white;
+display:block;
+margin-bottom: 30px;
+}
+
+#button1:active{
+
+border: solid white 1.5px;
+}
