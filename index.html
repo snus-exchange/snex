@@ -12,96 +12,10 @@
       	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     	<meta name="apple-application-name" content="Snus Exchange">
   <link rel="apple-touch-icon" href="se.jpg">
-
-  <style>
-
-      html div{
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none;
-
-
-}
-
-
-  body{
-  background-color: black;
-  }
-  #imenu{
-    display: none;
-height: 845px;
-overflow: hidden;
-  }
-
-  #imenu iframe{
-    display:block;
-margin-top: 40px;
-height: 90%;
-width: 100%;
-  border: none;
-
-  }
-
-  .back{
-    display: block;
-    position: absolute;
-
-text-decoration: underline;
-float: left;
-color: white;
-  }
+  <link rel="stylesheet" href="home.css">
 
 
 
-  #home{
-display:block;
-overflow: hidden;
-  }
-
-  .header{
-  color: white;
-  margin-top: 50%;
-  }
-
-   .version{
-  color: white;
-
-  }
-
-     .button{
-  border: solid white 1px;
-  width: 150px;
-  height: 50px;
-   color: white;
-   display:block;
-     margin-bottom: 30px;
-  }
-
-     #button1:active{
-
-  border: solid white 1.5px;
-  }
-
-
-
-  </style>
-  <script type="text/javascript">
-    function switchVisible() {
-                if (document.getElementById('home')) {
-
-                    if (document.getElementById('home').style.display == 'none') {
-                        document.getElementById('home').style.display = 'block';
-                        document.getElementById('imenu').style.display = 'none';
-                    }
-                    else {
-                        document.getElementById('home').style.display = 'none';
-                        document.getElementById('imenu').style.display = 'block';
-                    }
-                }
-    }
-  </script>
 
 
 
@@ -121,7 +35,7 @@ overflow: hidden;
 
   </div>
 
-    <div class="button" onclick="switchVisible()">
+    <div class="button" id="chatbtn">
 
    <p>
   Chat
@@ -148,7 +62,7 @@ overflow: hidden;
     <div class="version">
 
   <p>
-  beta 1.0.4
+  beta 1.0.5
   </p>
 
     </div>
@@ -163,15 +77,17 @@ overflow: hidden;
 
 <div id="imenu">
 
-<div class="back" onclick="switchVisible()">
+<div class="back" id="closebtn">
 <p> < back</p>
 </div>
+<script id="cid0020000308930713420" data-cfasync="false" async src="http://st.chatango.com/js/gz/emb.js" style="width: 50%;height: 100%;
+">{"handle":"snexchange","arch":"js","styles":{"a":"000000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000000",
+  "l":"000000","m":"000000","n":"FFFFFF","p":"10","q":"000000","r":100,"ab":false,"surl":0,"cnrs":"0.35"}}</script>
 
-<iframe src="https://snexchange.chatango.com/" width="100%" height="100%"></iframe>
+
+
 
 </div>
-
-
-
+<script src="home.js" charset="utf-8"></script>
         </body>
       </html>
