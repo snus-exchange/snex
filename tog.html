@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, height=device-height">
+    <meta name="apple-mobile-web-app-title" content="Tog">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="">
+    <link rel="icon" type="image/x-icon" href="https://kampanje.com/globalassets/offentlige-etater/jernbane/bane-nor-logo-mal_980x674.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://kampanje.com/globalassets/offentlige-etater/jernbane/bane-nor-logo-mal_980x674.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kampanje.com/globalassets/offentlige-etater/jernbane/bane-nor-logo-mal_980x674.jpg">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://kampanje.com/globalassets/offentlige-etater/jernbane/bane-nor-logo-mal_980x674.jpg">
+    <style media="screen">
+      body{
+        height: 100vh;
+        width: 96vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: black;
+      }
+
+      iframe{
+        height:100vh;
+         width:100vw;
+         overflow: hidden;
+      }
+
+#rtd{
+  height:100vh;
+   width:100vw;
+   overflow: hidden;
+}
+
+
+      #rtd_knapp{
+        display: flex;
+
+        position: absolute;
+
+        border: solid black;
+        height: 20px;
+        width: 35px;
+      top: 50px;
+      right: 0;
+
+      }
+    </style>
+    <script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("kart");
+      var y = document.getElementById("rtd");
+      if (x.style.display === "none") {
+        x.style.display = "flex";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "flex"
+      }
+    }
+
+
+    </script>
+    <title>Tog</title>
+  </head>
+  <body>
+    <div id="rtd_knapp" onclick="javascript:myFunction()">
+      rtd
+    </div>
+    <iframe src="https://togkart.banenor.no/"  title="banenor togkart" id="kart"></iframe>
+    <div id="rtd" style="display:none;">
+        <iframe src="rtd.html" title="Iframe Example" ></iframe>
+    </div>
+  </body>
+</html>
